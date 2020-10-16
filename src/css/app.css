@@ -1,11 +1,24 @@
-* {
-  margin: 0;
-  padding: 0; }
-
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
 .app {
   min-width: 100vw;
   min-height: 100vh;
-  background-color: #222831; }
+  background: linear-gradient(#f9f7f7, #dbe2ef);
+  cursor: none; }
+  .app .cursor {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: #f9f7f7;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    mix-blend-mode: exclusion;
+    z-index: 1000;
+    transition: all 0.02s linear; }
   .app h1 {
-    color: #eeeeee;
-    text-align: center; }
+    color: #112d4e;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 6vw; }
