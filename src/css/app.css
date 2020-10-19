@@ -2,22 +2,46 @@
 .app {
   min-width: 100vw;
   min-height: 100vh;
-  background: linear-gradient(#f9f7f7, #dbe2ef);
+  background: linear-gradient(white, #dbe2ef);
   cursor: none; }
   .app .cursor {
     height: 20px;
     width: 20px;
     border-radius: 50%;
-    background-color: #f9f7f7;
+    background-color: white;
     position: fixed;
     top: 0;
     left: 0;
     transform: translate(-50%, -50%);
     mix-blend-mode: exclusion;
     z-index: 1000;
-    transition: all 0.02s linear; }
+    transition: all 0.02s linear;
+    pointer-events: none; }
+  .app .color-mode {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    position: fixed;
+    top: 5vw;
+    right: 5vw;
+    background-color: black;
+    transition: all 0.7s;
+    transform: translate(50%, -50%); }
+  .app .dark-filter {
+    position: fixed;
+    top: 5vw;
+    right: 5vw;
+    border-radius: 50%;
+    background-color: white;
+    mix-blend-mode: difference;
+    z-index: 2000;
+    pointer-events: none;
+    transform: translate(50%, -50%);
+    transition: all 1s; }
+  .app .color-mode:hover {
+    transform: scale(2) translate(25%, -25%); }
   .app h1 {
-    color: #112d4e;
+    color: black;
     text-align: center;
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
