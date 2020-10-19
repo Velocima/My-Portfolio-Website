@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import '../css/cursor.css'
 
 export const Cursor = () => {
 	const [ cursorX, setCursorX ] = useState(-10);

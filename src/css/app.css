@@ -4,19 +4,6 @@
   min-height: 100vh;
   background: linear-gradient(white, #dbe2ef);
   cursor: none; }
-  .app .cursor {
-    height: 20px;
-    width: 20px;
-    border-radius: 50%;
-    background-color: white;
-    position: fixed;
-    top: 0;
-    left: 0;
-    transform: translate(-50%, -50%);
-    mix-blend-mode: exclusion;
-    z-index: 1000;
-    transition: all 0.02s linear;
-    pointer-events: none; }
   .app .color-mode {
     height: 20px;
     width: 20px;
