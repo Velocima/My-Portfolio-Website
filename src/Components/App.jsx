@@ -17,15 +17,22 @@ export default function App() {
 	}
 	
 	// Cursor hover state and functions
+	const [ linkHovered, setLinkHovered ] = useState(false);
 
+	const handleMouseEnterLink = () => {
+		setLinkHovered(true);
+	}
+	const handleMouseLeaveLink = () => {
+		setLinkHovered(false);
+	}
 
 	return (
 		<div className="app">
-			<Cursor />
+			<Cursor isLinkHovered={linkHovered}/>
 			<div className='dark-filter' style={darkFilterStyle}></div>
 			<div className="color-mode" onClick={handleColorModeClick}></div>
 			<h1>MAX HARTLEY</h1>
-			<Nav />
+			<Nav isLinkHovered={handleMouseEnterLink} isLinkUnhovered={handleMouseLeaveLink}/>
 		</div>
 	)
 }

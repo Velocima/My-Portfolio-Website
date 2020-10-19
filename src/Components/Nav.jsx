@@ -5,17 +5,22 @@ import {
 } from "react-router-dom";
 import '../css/nav.css'
 
-export const Nav = () => {
+export const Nav = (props) => {
+    const pages = ['About', 'Projects', 'Contact'];
+    const handleMouseOver = () => {
+        props.isLinkHovered();
+    }
+    const handleMouseLeave = () => {
+        props.isLinkUnhovered();
+    }
+
     return (<Router>
         <nav className="nav">
             <ul>
-                <li><Link to='/about'>About</Link></li>
-                <li><Link to='/projects'>Projects</Link></li>
-                <li><Link to='/contact'>Contact</Link></li>
+                {pages.map(link => {
+                    return <li onMouseEnter={handleMouseOver} onMouseLeave={handleMouseLeave}><Link to={() => `/${link.toLowerCase()}`}>{link}</Link></li>
+                })}
             </ul>
         </nav>
     </Router>)
 }
-
-
-{/*  */}
