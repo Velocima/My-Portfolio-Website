@@ -22,7 +22,7 @@ export const Nav = (props) => {
         setAnimated(prev => prev.filter(listId => listId !== target.parentNode.id))
     }
 
-    return (<Router>
+    return (
         <nav className="nav">
             <ul>
                 {pages.map((link, pagesIndex) => {
@@ -49,6 +49,5 @@ export const Nav = (props) => {
                         </Link>)
                 })}
             </ul>
-        </nav>
-    </Router>)
+        </nav>)
 }

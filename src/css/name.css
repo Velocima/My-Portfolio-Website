@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap");
+a {
+  text-decoration: none;
+  cursor: none; }
+
+h1 {
+  position: fixed;
+  top: 15vw;
+  left: 10vw;
+  color: black;
+  text-align: center;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 300;
+  font-size: 6vw;
+  transition: all 0.5s; }
+
+.top {
+  position: fixed;
+  top: 3vw;
+  left: 5vw;
+  font-size: 2.5vw; }
