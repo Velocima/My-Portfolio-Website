@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 export const BouncyWord = (props) => {
-    const { isLinkHovered, isLinkUnhovered, word } = props;
+    const { isLinkHovered, isLinkUnhovered, word, disabled } = props;
     const [ animated, setAnimated ] = useState(false);
     const handleMouseOver = () => {
         isLinkHovered();
@@ -15,19 +15,19 @@ export const BouncyWord = (props) => {
     }
     return (
         <p
-            id={word}
-            className={animated ? "animated" : ""}
+            className={!disabled && animated ? "animated" : ""}
             onMouseEnter={handleMouseOver} 
             onMouseLeave={handleMouseLeave} 
         >{
             word
                 .split('')
-                .map((letter, spanIndex) => {
+                .map((letter, index) => {
+                    if (letter === ' ' ) return ' ';
                     return (
                         <span 
-                            key={spanIndex} 
+                            key={letter.repeat(index)} 
                             onAnimationEnd={
-                                spanIndex === word.length -1 ? 
+                                index === word.length -1 ? 
                                 handleAnimationEnd : 
                                 function() {}
                             }

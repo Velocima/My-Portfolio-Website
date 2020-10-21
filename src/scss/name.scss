@@ -1,27 +1,35 @@
 @import './helpers/variables';
+@import './helpers/animations';
 // font
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap');
 
 
-a {
+.name {
     text-decoration: none;
     cursor: none;
-}
-h1 {
     position: fixed;
     top: 15vw;
     left: 10vw;
-    color: $color4;
-    text-align: center;
-    font-family: 'Quicksand', sans-serif;
-    font-weight: 300;
-    font-size: 6vw;
     transition: all 0.5s;
+    p {
+        color: $color4;
+        text-align: center;
+        font-family: 'Quicksand', sans-serif;
+        font-weight: 300;
+        font-size: 6vw;
+        transition: all 0.5s;
+        span {
+            display: inline-block;
+        }
+    }
 }
 
-.top {
+
+#top {
     position: fixed;
     top: 3vw;
     left: 5vw;
-    font-size: 2.5vw;
+    p { 
+        font-size: 2.5vw;
+    }
 }

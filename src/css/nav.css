@@ -80,8 +80,6 @@ nav {
         font-size: 50px; }
         nav ul a li span {
           display: inline-block; }
-        nav ul a li .span-hover {
-          animation: bob 0.4s; }
 
 .closed {
   right: -250px; }

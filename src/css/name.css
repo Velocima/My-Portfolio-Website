@@ -1,21 +1,64 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap");
-a {
-  text-decoration: none;
-  cursor: none; }
+@keyframes bob {
+  0% {
+    transform: translateY(0); }
+  25% {
+    transform: translateY(-20%); }
+  75% {
+    transform: translateY(20%); }
+  100% {
+    transform: translateY(0); } }
 
-h1 {
+.animated span:nth-child(1) {
+  animation: bob 0.3s linear 0.06s; }
+
+.animated span:nth-child(2) {
+  animation: bob 0.3s linear 0.12s; }
+
+.animated span:nth-child(3) {
+  animation: bob 0.3s linear 0.18s; }
+
+.animated span:nth-child(4) {
+  animation: bob 0.3s linear 0.24s; }
+
+.animated span:nth-child(5) {
+  animation: bob 0.3s linear 0.3s; }
+
+.animated span:nth-child(6) {
+  animation: bob 0.3s linear 0.36s; }
+
+.animated span:nth-child(7) {
+  animation: bob 0.3s linear 0.42s; }
+
+.animated span:nth-child(8) {
+  animation: bob 0.3s linear 0.48s; }
+
+.animated span:nth-child(9) {
+  animation: bob 0.3s linear 0.54s; }
+
+.animated span:nth-child(10) {
+  animation: bob 0.3s linear 0.6s; }
+
+.name {
+  text-decoration: none;
+  cursor: none;
   position: fixed;
   top: 15vw;
   left: 10vw;
-  color: black;
-  text-align: center;
-  font-family: 'Quicksand', sans-serif;
-  font-weight: 300;
-  font-size: 6vw;
   transition: all 0.5s; }
+  .name p {
+    color: black;
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 300;
+    font-size: 6vw;
+    transition: all 0.5s; }
+    .name p span {
+      display: inline-block; }
 
-.top {
+#top {
   position: fixed;
   top: 3vw;
-  left: 5vw;
-  font-size: 2.5vw; }
+  left: 5vw; }
+  #top p {
+    font-size: 2.5vw; }

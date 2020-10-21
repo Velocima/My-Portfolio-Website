@@ -25,7 +25,7 @@ export default function App() {
 			<div className="app">
 				<Cursor isLinkHovered={linkHovered}/>
 				<DarkMode />
-				<Name />
+				<Name isLinkHovered={handleMouseEnterLink} isLinkUnhovered={handleMouseLeaveLink}/>
 				<Nav isLinkHovered={handleMouseEnterLink} isLinkUnhovered={handleMouseLeaveLink}/>
 			</div>
 		</Router>
