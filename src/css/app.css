@@ -3,7 +3,4 @@
   min-width: 100vw;
   min-height: 100vh;
   background: linear-gradient(white, #dbe2ef);
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
   cursor: none; }

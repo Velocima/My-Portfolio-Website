@@ -22,8 +22,14 @@ export const Nav = (props) => {
         setAnimated(prev => prev.filter(listId => listId !== target.parentNode.id))
     }
 
+    const [ navOpen, setNavOpen ] = useState(false);
+
+    const handleButtonClick = () => {
+        setNavOpen(prev => !prev)
+    }
     return (
-        <nav className="nav">
+        <nav className={`nav ${navOpen ? '' : 'closed'}`}>
+            <div className={`button ${navOpen ? 'closed' : 'open'}`} onClick={handleButtonClick}></div>
             <ul>
                 {pages.map((link, pagesIndex) => {
                     return (<Link key={pagesIndex} to={() => `/${link.toLowerCase()}`}>
