@@ -10,6 +10,9 @@
   transition: all 0.7s;
   transform: translate(50%, -50%); }
 
+.color-mode:hover {
+  transform: scale(2) translate(25%, -25%); }
+
 .dark-filter {
   position: fixed;
   top: 5vw;
@@ -21,6 +24,3 @@
   pointer-events: none;
   transform: translate(50%, -50%);
   transition: all 1s; }
-
-.color-mode:hover {
-  transform: scale(2) translate(25%, -25%); }
