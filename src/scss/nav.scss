@@ -53,13 +53,6 @@ nav {
                 }
                 
             }
-            .animated {
-                @for $i from 1 through 10 {
-                    span:nth-child(#{$i}) {
-                        animation: bob 0.3s linear (0.06s*$i);
-                    }
-                }
-            }
         }
     }
 }

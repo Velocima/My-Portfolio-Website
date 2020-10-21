@@ -9,6 +9,36 @@
   100% {
     transform: translateY(0); } }
 
+.animated span:nth-child(1) {
+  animation: bob 0.3s linear 0.06s; }
+
+.animated span:nth-child(2) {
+  animation: bob 0.3s linear 0.12s; }
+
+.animated span:nth-child(3) {
+  animation: bob 0.3s linear 0.18s; }
+
+.animated span:nth-child(4) {
+  animation: bob 0.3s linear 0.24s; }
+
+.animated span:nth-child(5) {
+  animation: bob 0.3s linear 0.3s; }
+
+.animated span:nth-child(6) {
+  animation: bob 0.3s linear 0.36s; }
+
+.animated span:nth-child(7) {
+  animation: bob 0.3s linear 0.42s; }
+
+.animated span:nth-child(8) {
+  animation: bob 0.3s linear 0.48s; }
+
+.animated span:nth-child(9) {
+  animation: bob 0.3s linear 0.54s; }
+
+.animated span:nth-child(10) {
+  animation: bob 0.3s linear 0.6s; }
+
 nav {
   display: flex;
   align-items: center;
@@ -49,26 +79,6 @@ nav {
           display: inline-block; }
         nav ul a li .span-hover {
           animation: bob 0.4s; }
-      nav ul a .animated span:nth-child(1) {
-        animation: bob 0.3s linear 0.06s; }
-      nav ul a .animated span:nth-child(2) {
-        animation: bob 0.3s linear 0.12s; }
-      nav ul a .animated span:nth-child(3) {
-        animation: bob 0.3s linear 0.18s; }
-      nav ul a .animated span:nth-child(4) {
-        animation: bob 0.3s linear 0.24s; }
-      nav ul a .animated span:nth-child(5) {
-        animation: bob 0.3s linear 0.3s; }
-      nav ul a .animated span:nth-child(6) {
-        animation: bob 0.3s linear 0.36s; }
-      nav ul a .animated span:nth-child(7) {
-        animation: bob 0.3s linear 0.42s; }
-      nav ul a .animated span:nth-child(8) {
-        animation: bob 0.3s linear 0.48s; }
-      nav ul a .animated span:nth-child(9) {
-        animation: bob 0.3s linear 0.54s; }
-      nav ul a .animated span:nth-child(10) {
-        animation: bob 0.3s linear 0.6s; }
 
 .closed {
   right: -250px; }

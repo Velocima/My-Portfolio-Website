@@ -1,56 +1,35 @@
 import React, { useState } from 'react';
 import {
   BrowserRouter as Router,
-  Link
+  Link,
+  useLocation
 } from "react-router-dom";
+import { BouncyWord } from './BouncyWord'
 import '../css/nav.css'
 
 export const Nav = (props) => {
     const pages = ['About', 'Projects', 'Contact'];
-    const [ animated, setAnimated ] = useState([]);
 
-    const handleMouseOver = ({ target }) => {
-        props.isLinkHovered();
-        setAnimated(prev => [...prev, target.parentNode.id])
+    // nav button 
+    const { pathname } = useLocation();
+    const [ navOpen, setNavOpen ] = useState(true);
+    const setButtonClassName = () => {
+        const open = navOpen ? 'closed' : 'open';
+        const hide = pathname === '/' ? 'hide' : '';
+        return `button ${hide} ${open}`
     }
-
-    const handleMouseLeave = () => {
-        props.isLinkUnhovered();
-    }
-    
-    const handleAnimationEnd = ({ target }) => {
-        setAnimated(prev => prev.filter(listId => listId !== target.parentNode.id))
-    }
-
-    const [ navOpen, setNavOpen ] = useState(false);
-
     const handleButtonClick = () => {
         setNavOpen(prev => !prev)
     }
+
     return (
         <nav className={`nav ${navOpen ? '' : 'closed'}`}>
-            <div className={`button ${navOpen ? 'closed' : 'open'}`} onClick={handleButtonClick}></div>
+            <div className={setButtonClassName()} onClick={handleButtonClick}></div>
             <ul>
                 {pages.map((link, pagesIndex) => {
                     return (<Link key={pagesIndex} to={() => `/${link.toLowerCase()}`}>
-                            <li 
-                                id={link}
-                                className={animated.includes(link) ? "animated" : ""}
-                                onMouseEnter={handleMouseOver} 
-                                onMouseLeave={handleMouseLeave} 
-                                >
-                                {
-                                link
-                                    .split('')
-                                    .map((letter, spanIndex) => {
-                                    return (<span 
-                                                key={spanIndex} 
-                                                onAnimationEnd={spanIndex === link.length -1 ? handleAnimationEnd : function() {}}
-                                                >
-                                                {letter}
-                                            </span>)
-                                })
-                                }
+                            <li>
+                                <BouncyWord word={link} isLinkHovered={props.isLinkHovered} isLinkUnhovered={props.isLinkUnhovered}/>
                             </li>
                         </Link>)
                 })}
