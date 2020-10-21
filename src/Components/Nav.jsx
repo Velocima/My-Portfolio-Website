@@ -8,13 +8,16 @@ import '../css/nav.css'
 export const Nav = (props) => {
     const pages = ['About', 'Projects', 'Contact'];
     const [ animated, setAnimated ] = useState([]);
+
     const handleMouseOver = ({ target }) => {
         props.isLinkHovered();
         setAnimated(prev => [...prev, target.parentNode.id])
     }
+
     const handleMouseLeave = () => {
         props.isLinkUnhovered();
     }
+    
     const handleAnimationEnd = ({ target }) => {
         setAnimated(prev => prev.filter(listId => listId !== target.parentNode.id))
     }
@@ -49,10 +52,3 @@ export const Nav = (props) => {
         </nav>
     </Router>)
 }
-
-
-// return (<li onMouseEnter={handleMouseOver} onMouseLeave={handleMouseLeave}>
-//     <Link to={() => `/${link.toLowerCase()}`}>
-//         {link.split('').map(letter => <span>{letter}</span>)}
-//     </Link>
-// </li>)
