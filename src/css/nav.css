@@ -61,6 +61,9 @@ nav {
     transform: translateX(-100%) scale(1.5); }
   nav .closed:hover {
     transform: scale(1.5); }
+  nav .hide {
+    pointer-events: none;
+    opacity: 0; }
   nav ul {
     height: 100%;
     list-style: none;

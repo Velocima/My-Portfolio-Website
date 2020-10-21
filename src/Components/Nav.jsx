@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   BrowserRouter as Router,
   Link,
@@ -22,6 +22,9 @@ export const Nav = (props) => {
         setNavOpen(prev => !prev)
     }
 
+    useEffect(() => {
+        setNavOpen(pathname === '/' ? true : false);
+    }, [pathname])
     return (
         <nav className={`nav ${navOpen ? '' : 'closed'}`}>
             <div className={setButtonClassName()} onClick={handleButtonClick}></div>

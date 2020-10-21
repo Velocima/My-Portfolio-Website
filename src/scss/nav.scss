@@ -30,6 +30,10 @@ nav {
     .closed:hover {
         transform: scale(1.5);
     }
+    .hide {
+        pointer-events: none;
+        opacity: 0;
+    }
 
     ul {
         height: 100%;
