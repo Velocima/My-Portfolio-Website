@@ -3,59 +3,58 @@
 // font
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap');
 
-
 nav {
-    display: flex;
-    align-items: center;
-    position: fixed;
-    width: 250px;
-    right: 10vw;
-    top: 50vh;
-    transform: translateY(-50%);
-    height: 50vh;
-    transition: all 0.5s;
+	display: flex;
+	align-items: center;
+	position: fixed;
+	width: 250px;
+	right: 10vw;
+	top: 50vh;
+	transform: translateY(-50%);
+	height: 50vh;
+	transition: all 0.5s;
 
-    .button {
-        margin-right: 20px;
-        height: 40px;
-        width: 40px;
-        border-radius: 50%;
-        transform: translateX(-50%);
-        background-color: $color4;
-        transition: all 0.4s;
-    }
-    .open:hover {
-        transform: translateX(-100%) scale(1.5);
-    }
-    .closed:hover {
-        transform: scale(1.5);
-    }
-    .hide {
-        pointer-events: none;
-        opacity: 0;
-    }
+	.button {
+		margin-right: 20px;
+		height: 40px;
+		width: 40px;
+		border-radius: 50%;
+		transform: translateX(-50%);
+		background-color: $color4;
+		transition: all 0.4s;
+	}
+	.open:hover {
+		transform: translateX(-100%) scale(1.5);
+	}
+	.closed:hover {
+		transform: scale(1.5);
+	}
+	.hide {
+		pointer-events: none;
+		opacity: 0;
+	}
 
-    ul {
-        height: 100%;
-        list-style: none;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        a {
-            text-decoration: none;
-            color: $color4;
-            cursor: none;
-            li {
-                font-family: 'Quicksand', sans-serif;
-                font-size: 50px;
-                span {
-                    display: inline-block;
-                }
-            }
-        }
-    }
+	ul {
+		height: 100%;
+		list-style: none;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		a {
+			text-decoration: none;
+			color: $color4;
+			cursor: none;
+			li {
+				font-family: 'Quicksand', sans-serif;
+				font-size: 50px;
+				span {
+					display: inline-block;
+				}
+			}
+		}
+	}
 }
 .closed {
-    right: -250px; 
+	right: -250px;
 }

@@ -2,30 +2,29 @@
 // font
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap');
 
-
 .color-mode {
-    height: 20px;
-    width: 20px;
-    border-radius: 50%;
-    position: fixed;
-    top: 5vw;
-    right: 5vw;
-    background-color: $color4;
-    transition: all 0.7s;
-    transform: translate(50%, -50%);
+	height: 20px;
+	width: 20px;
+	border-radius: 50%;
+	position: fixed;
+	top: 5vw;
+	right: 5vw;
+	background-color: $color4;
+	transition: all 0.7s;
+	transform: translate(50%, -50%);
 }
 .color-mode:hover {
-    transform: scale(2) translate(25%, -25%);
+	transform: scale(2) translate(25%, -25%);
 }
 .dark-filter {
-    position: fixed;
-    top: 5vw;
-    right: 5vw;
-    border-radius: 50%;
-    background-color: $color1;
-    mix-blend-mode: difference;
-    z-index: 2000;
-    pointer-events: none;
-    transform: translate(50%, -50%);
-    transition: all 1s;
+	position: fixed;
+	top: 5vw;
+	right: 5vw;
+	border-radius: 50%;
+	background-color: $color1;
+	mix-blend-mode: difference;
+	z-index: 2000;
+	pointer-events: none;
+	transform: translate(50%, -50%);
+	transition: all 1s;
 }
