@@ -20,7 +20,9 @@ export const Nav = (props) => {
 
 	const [buttonHeight, setButtonHeight] = useState();
 	useEffect(() => {
+		// determines whether to display the button
 		setNavOpen(pathname === '/' ? true : false);
+		// determines button height
 		setButtonHeight(
 			pathname === '/about'
 				? '-43%'
