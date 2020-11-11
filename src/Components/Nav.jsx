@@ -18,14 +18,24 @@ export const Nav = (props) => {
 		setNavOpen((prev) => !prev);
 	};
 
+	const [buttonHeight, setButtonHeight] = useState();
 	useEffect(() => {
 		setNavOpen(pathname === '/' ? true : false);
+		setButtonHeight(
+			pathname === '/about'
+				? '-43%'
+				: pathname === '/contact'
+				? '44%'
+				: '0'
+		);
 	}, [pathname]);
+
 	return (
 		<nav className={`nav ${navOpen ? '' : 'closed'}`}>
 			<div
 				className={setButtonClassName()}
 				onClick={handleButtonClick}
+				style={{ top: buttonHeight }}
 			></div>
 			<ul>
 				{pages.map((link, pagesIndex) => {

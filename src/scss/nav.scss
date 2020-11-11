@@ -15,19 +15,21 @@ nav {
 	transition: all 0.5s;
 
 	.button {
-		margin-right: 20px;
+		position: relative;
+		right: 20px;
 		height: 40px;
 		width: 40px;
+		margin-right: 20px;
 		border-radius: 50%;
-		transform: translateX(-50%);
 		background-color: $color4;
 		transition: all 0.4s;
 	}
 	.open:hover {
-		transform: translateX(-100%) scale(1.5);
+		right: 30px;
+		transform: scale(1.5);
 	}
 	.closed:hover {
-		transform: scale(1.5);
+		transform: scale(0.7) translateX(50%);
 	}
 	.hide {
 		pointer-events: none;
